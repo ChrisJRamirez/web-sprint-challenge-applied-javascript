@@ -13,6 +13,8 @@ const Header = (title, date, temp) => {
   //
 }
 
+//setting up codegrade test
+
 const headerAppender = (selector) => {
   // TASK 2
   // ---------------------
