@@ -39,7 +39,7 @@ const headerAppender = (selector) => {
   // ---------------------
   // Implement this function taking a css selector as its only argument.
   // It should create a header using the Header component above, passing arguments of your choosing.
-  const header = Header(selector.title, selector.date, selector.temp)
+  const header = Header("This Just In", "June 13, 2021", "Lambda is hard")
   // It should append the header to the element in the DOM that matches the given selector.
 
   const domSelector = document.querySelector(selector)
