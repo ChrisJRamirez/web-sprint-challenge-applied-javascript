@@ -44,7 +44,7 @@ const Card = (article) => {
 
 
   cardTag.addEventListener("click", () => {
-    console.log(headEle.textContent)
+
 
   })
 
@@ -61,6 +61,15 @@ const Card = (article) => {
 //
 
 const cardAppender = (selector) => {
+  const newSelector = document.querySelector(selector)
+
+  axios.get(`https://lambda-times-api.herokuapp.com/articles`)
+    .then(req => {
+      const newCard = (Card.req.data.articles)
+      newSelector.appendChild(newCard)
+
+    })
+    .catch(err => console.log(err))
 
 }
 
