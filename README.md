@@ -76,7 +76,16 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+The DOM is a tree structure which represents the document in a logical manner.
+
 2. What is an event?
+An event is an interaction between your website and the user of the website.
+
 3. What is an event listener?
+An event listener is a function used to record/react to interactions on the website.
+
 4. Why would we convert a NodeList into an Array?
+So it is more accessible and easier to work with.
+
 5. What is a component?
+They are reusable functions that can operate independently.
