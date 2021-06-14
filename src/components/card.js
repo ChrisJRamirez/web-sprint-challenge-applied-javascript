@@ -21,37 +21,35 @@ const Card = (article) => {
   const { headline, authorPhoto, authorName } = article
 
   const cardTag = document.createElement("div")
-  cardTag.classList.add("card")
-
-  const headElement = document.createElement("div")
-  headElement.classList.add = ("headline")
-  headElement.textContent = headline
-  cardTag.appendChild(headElement)
-
-  const authorElement = document.createElement("div")
-  authorElement.classList.add("author")
-  cardTag.appendChild(authorElement)
-
+  const headEle = document.createElement("div")
+  const authorEle = document.createElement("div")
   const imgCont = document.createElement("div")
-  imgCont.classList.add("img-container")
-  authorElement.appendChild(imgCont)
-
-  const imgSource = document.createElement("img")
-  imgSource.src = authorPhoto
-  imgCont.appendChild(imgSource)
-
+  const authorImage = document.createElement("img")
   const authorSpan = document.createElement("span")
+
+  cardTag.appendChild(headEle)
+  cardTag.appendChild(authorEle)
+  authorEle.appendChild(imgCont)
+  authorEle.appendChild(authorSpan)
+  imgCont.appendChild(authorImage)
+
+  cardTag.classList.add("card")
+  headEle.classList.add("headline")
+  imgCont.classList.add("img-container")
+  authorEle.classList.add("author")
+
+  headEle.textContent = headline
+  authorImage.src = authorPhoto
   authorSpan.textContent = `By ${authorName}`
-  authorElement.appendChild(authorSpan)
+
 
   cardTag.addEventListener("click", () => {
-    console.log(headElement.textContent)
+    console.log(headEle.textContent)
 
   })
-  console.log(headElement)
+
   return cardTag
 }
-
 
 // TASK 6
 // ---------------------
